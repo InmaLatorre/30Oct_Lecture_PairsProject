@@ -68,7 +68,7 @@ sapply(versicolor[,1:4],mean)
 sapply(virginica[,1:4],mean)
 ````
 
-##Conclusiones
+## Conclusiones
 
 Se puede notar una gran diferencia de tamaño del pétalo entre la setosa y las demás.
 Sin embargo, el tamaño del sépalo es parecido, inluso un poco más ancho. La virginica y la versicolor son bastante parecidas de forma, ya que la versicolor es un poco más pequeña que la virginica, pero siguen las mismas proporciones tamaño aproximadamente.
