@@ -36,7 +36,7 @@ kable( iris , caption = "BBDD `iris` con `kable()`"
 
 ## Análisis
 
-A partir de la tabla concluimos que las categorías se dividen en longitud del sépalo, ancho del sépalo, longitud del pétalo, ancho del pétalo y especies.
+A partir de la tabla concluimos que las **categorías** se dividen en longitud del sépalo, ancho del sépalo, longitud del pétalo, ancho del pétalo y especies.
 
 Para saber cuántas especies hay, aplicamos:
 
@@ -44,9 +44,9 @@ Para saber cuántas especies hay, aplicamos:
 table(iris$Species)
 ```
 
-donde se puede observar que se estudian 3 especies: setosa, versicolor y virginica. De cada una de ellas hay 50 especimes.
+donde se puede observar que se estudian 3 **especies**: setosa, versicolor y virginica. De cada una de ellas hay 50 especimes.
 
-A continuación vamos a analizar la diferencia entre cada especie. Para ello crearemos 3 tablas en las que cada una pertenece a una especie diferente:
+A continuación vamos a **analizar la diferencia** entre cada especie. Para ello crearemos 3 tablas en las que cada una pertenece a una especie diferente:
 
 ```{r flor}
 setosa <- iris[iris$Species == "setosa",]
@@ -67,6 +67,8 @@ sapply(versicolor[,1:4],mean)
 ```{r virginica}
 sapply(virginica[,1:4],mean)
 ````
+
+##Conclusiones
 
 Se puede notar una gran diferencia de tamaño del pétalo entre la setosa y las demás.
 Sin embargo, el tamaño del sépalo es parecido, inluso un poco más ancho. La virginica y la versicolor son bastante parecidas de forma, ya que la versicolor es un poco más pequeña que la virginica, pero siguen las mismas proporciones tamaño aproximadamente.
