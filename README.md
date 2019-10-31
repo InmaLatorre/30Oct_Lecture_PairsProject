@@ -5,7 +5,7 @@ _Alicia Díaz, Inma Latorre, Camilla Mosseddu_
 
 1. **Documento R Markdown**
 
-En este proyecto hemos creado un documento R Markdown.
+En este proyecto hemos creado un documento R Markdown, en el que analizamos la tabla iris y las diferencias entre las flores.
 
 2. **Flexdashboard editado para el proyecto**
 
