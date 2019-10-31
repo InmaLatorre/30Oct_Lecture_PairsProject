@@ -1,10 +1,10 @@
 pageWithSidebar(
-  headerPanel('Iris k-means clustering'),
+  headerPanel('Agrupamiento de K-medias de Iris'),
   sidebarPanel(
-    selectInput('xcol', 'X Variable', names(iris)),
-    selectInput('ycol', 'Y Variable', names(iris),
+    selectInput('xcol', 'Variable X', names(iris)),
+    selectInput('ycol', 'Variable Y', names(iris),
                 selected=names(iris)[[2]]),
-    numericInput('clusters', 'Cluster count', 3,
+    numericInput('clusters', 'Cuenta de Cluster', 3,
                  min = 1, max = 9)
   ),
   mainPanel(
