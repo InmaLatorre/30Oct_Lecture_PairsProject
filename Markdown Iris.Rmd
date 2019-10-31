@@ -1,6 +1,6 @@
 ---
 title: "Markdown Iris"
-author: "Inmaculada, Camilla, Alicia Díaz"
+author: "Inma, Camilla, Alicia Díaz"
 date: "31/10/2019"
 output: 
   html_document:
