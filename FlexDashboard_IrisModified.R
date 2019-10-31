@@ -1,5 +1,5 @@
 ---
-  title: "Iris K-Means Clustering"
+  title: "Documento FlexDashboard Modificado para el proyecto"
 output: 
   flexdashboard::flex_dashboard:
   orientation: columns
@@ -8,10 +8,10 @@ source_code: embed
 runtime: shiny
 ---
   
-  ```{r global, include=FALSE}
+```{r global, include=FALSE}
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 library(datasets)
-data(iris)
+data("airquality")
 ```
 
 
@@ -19,10 +19,10 @@ Column {.sidebar}
 -----------------------------------------------------------------------
   
   ```{r}
-selectInput('xcol', 'X Variable', names(iris))
+selectInput('xcol', 'X Variable', names(airquality))
 
-selectInput('ycol', 'Y Variable', names(iris),
-            selected=names(iris)[[2]])
+selectInput('ycol', 'Y Variable', names(airquality),
+            selected=names(airquality)[[2]])
 
 numericInput('clusters', 'Cluster count', 3,
              min = 1, max = 9)
@@ -33,13 +33,13 @@ Column
   
   ### K Means
   
-  ```{r}
+```{r}
 palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
           "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
 
 # Combine the selected variables into a new data frame
 selectedData <- reactive({
-  iris[, c(input$xcol, input$ycol)]
+  airquality[, c(input$xcol, input$ycol)]
 })
 
 clusters <- reactive({
