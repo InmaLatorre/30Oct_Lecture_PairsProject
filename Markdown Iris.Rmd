@@ -1,0 +1,71 @@
+---
+title: "Markdown Iris"
+author: "Inmaculada, Camilla, Alicia Díaz"
+date: "31/10/2019"
+output: 
+  html_document:
+    toc: true 
+    toc_float:
+      collapsed: false
+      smoth_scroll: false
+    theme: united
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# iris
+
+## TABLA
+
+Para empezar vamos a mostrar la tabla de los datos que vamos a analizar, en este caso la tabla es iris. La cual estudia las caracteriscias de 3 tipos de flores.
+
+```{r}
+library(knitr)
+data("iris")
+kable( iris , caption = "BBDD `iris` con `kable()`"
+       , align = c('c', 'c', 'c', 'c', 'c')
+       , col.names = c("Longitud Sépalo","Ancho de Sépalo","Longitud Pétalo","Ancho Pétalo","Especies")
+       , row.names = TRUE
+       , digits = 1
+       , format.args = list( decimal.mark = ",")
+      )
+```
+
+## Análisis
+
+A partir de la tabla concluimos que las categorías se dividen en longitud del sépalo, ancho del sepalo, longitud del petalo, ancho del pétalo y especies.
+
+Para saber cuantas especies hay aplicamos,
+
+```{r species}
+table(iris$Species)
+```
+
+donde se puede observar que se estudian 3 especies, setosa, versicolor y virginica. Y de cada una hay 50 especimes.
+
+A continuación vamos a analizar la diferencia entre cada especie, para ello crearemos 3 tablas en las que cada una pertenece a una especie diferente.
+
+```{r flor}
+setosa <- iris[iris$Species == "setosa",]
+versicolor <- iris[iris$Species == "versicolor",]
+virginica <- iris[iris$Species == "virginica",]
+```
+
+Hallamos la media de las demás categorías correpondientes con su especie
+
+```{r setosa}
+sapply(setosa[,1:4],mean)
+````
+
+```{r versicolor}
+sapply(versicolor[,1:4],mean)
+````
+
+```{r virginica}
+sapply(virginica[,1:4],mean)
+````
+
+Se puede notar una gran diferencia de tamaño del pétalo entre la setosa y las demás. Sin embargo, el tamaño del sépalo es parecido, inluso un poco más ancho. La virginica y la versicolor son bastatnte parecidas de forma, ya que la versicolor es un poco más pequeña que la virginica, pero siguen las mismas proporciones tamaño aproximadamente.
