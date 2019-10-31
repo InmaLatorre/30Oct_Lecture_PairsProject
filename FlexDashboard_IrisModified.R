@@ -1,3 +1,7 @@
+install.packages("shiny")
+library(shiny)
+runApp("FlexDashboard")
+
 ---
   title: "Documento FlexDashboard Modificado para el proyecto"
 output: 
