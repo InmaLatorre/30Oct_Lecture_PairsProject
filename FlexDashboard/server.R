@@ -17,7 +17,7 @@ function(input, output, session) {
     plot(selectedData(),
          col = c("darkturquoise","deeppink2","goldenrod2"),
          pch = 15, cex = 2)
-    points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+    points(clusters()$centers, pch = 3, cex = 3, lwd = 3)
   })
   
 }
