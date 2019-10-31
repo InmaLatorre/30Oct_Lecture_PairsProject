@@ -11,7 +11,7 @@ runtime: shiny
 ```{r global, include=FALSE}
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 library(datasets)
-data("airquality")
+data("iris")
 ```
 
 
@@ -19,10 +19,10 @@ Column {.sidebar}
 -----------------------------------------------------------------------
   
   ```{r}
-selectInput('xcol', 'X Variable', names(airquality))
+selectInput('xcol', 'X Variable', names(iris))
 
-selectInput('ycol', 'Y Variable', names(airquality),
-            selected=names(airquality)[[2]])
+selectInput('ycol', 'Y Variable', names(iris),
+            selected=names(iris)[[2]])
 
 numericInput('clusters', 'Cluster count', 3,
              min = 1, max = 9)
@@ -39,7 +39,7 @@ palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
 
 # Combine the selected variables into a new data frame
 selectedData <- reactive({
-  airquality[, c(input$xcol, input$ycol)]
+  iris[, c(input$xcol, input$ycol)]
 })
 
 clusters <- reactive({

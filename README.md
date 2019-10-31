@@ -6,7 +6,7 @@ _Alicia Díaz, Inma Latorre, Camilla Mosseddu_
 
 En este proyecto hemos creado un documento R Markdown.
 
-1. **Flexdashboard Editado para el proyecto**
+2. **Flexdashboard Editado para el proyecto**
 
 Hemos partido del ejemplo _Iris K-Means Clustering_ de Flexdashboard, al estar un poco familiarizados con este objeto por los ejercicios realizados en clase.
 
