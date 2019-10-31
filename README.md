@@ -11,3 +11,8 @@ En este proyecto hemos creado un documento R Markdown, en el que analizamos la t
 
 Hemos partido del ejemplo _Iris K-Means Clustering_ de Flexdashboard, al estar un poco familiarizados con este objeto por los ejercicios realizados en clase.
 
+
+
+
+
+gracias
